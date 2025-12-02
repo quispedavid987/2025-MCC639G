@@ -4,7 +4,7 @@
 #include "clasestemplate.h"
 #include "linkedlist.h"
 #include "pointers.h"
-#include "vector.h"
+//#include "vector.h"
 
 using namespace std;
 
