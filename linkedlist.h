@@ -11,16 +11,16 @@ template <typename T>
 class LLNode{
 private:
     using    Type = T;
-    friend   class CLinkedList<T>;
-    Type     m_data;
-    Ref      m_ref;
-    LLNode<T>    *m_pNext = nullptr;
+    friend   class CLinkedList<T>; //**Solo CLinkedLiist puede modificar el private
+    Type     m_data; //**Dato en el nodo
+    Ref      m_ref; //**Referencia del nodo
+    LLNode<T>    *m_pNext = nullptr; //**Puntero al siguiente nodo
 
 public:
-    LLNode(Type &elem, Ref ref, LLNode<T> *pNext = nullptr)
+    LLNode(Type &elem, Ref ref, LLNode<T> *pNext = nullptr) // constructor, el puntero al siguiente es nullptr
         : m_data(elem), m_ref(ref), m_pNext(pNext){ //PARAMETRO REF
     }
-    Type   GetData()    { return m_data;     }
+    Type   GetData()    { return m_data;     } //METODOS
     Ref    GetRef()     { return m_ref;     }
     Type  &GetDataRef() { return m_data;     }
     LLNode<T> * GetNext()    { return m_pNext;    } //DE NODE A LLNODE<T>
